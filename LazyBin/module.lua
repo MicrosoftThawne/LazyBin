@@ -1,6 +1,5 @@
--->>   LazyBin | 1.0.3   <<--
+-->>   LazyBin | 1.0.1   <<--
 -->> Written by JaheedFX <<--
--->> HAS NOT BEEN TESTED YET! <<--
 
 local lazyBin = {}
 local LUA_TTABLE = "table";local LUA_TSTRING = "string";local LUA_TNUMBER = "number";local LUA_TBOOLEAN = "boolean";local LUA_TNIL = nil;local LUA_TUSERDATA = "userdata";local LUA_TFUNCTION = "function"
@@ -23,10 +22,12 @@ end
 
 -->> TODO: Add arguments to registered functions! <<--
 Mouse.KeyDown(function(key)
-    for index,value in pairs(RegisteredKeys) do
-      if string.match(tolower(key), tolower(value)) then
-        RegisteredFunctions[index]()
-      end
+    if string.match(table.concat(RegisteredKeys), tolower(key)) then
+      for index,value in pairs(RegisteredKeys) do
+     		if string.match(tolower(key), tolower(value)) then
+      	  RegisteredFunctions[index]()
+      	end
+    	end
     end
 end)
   
