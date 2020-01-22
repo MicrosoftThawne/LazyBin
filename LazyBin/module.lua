@@ -1,4 +1,4 @@
--->>   LazyBin | 1.0.1   <<--
+-->>   LazyBin | 1.0.4   <<--
 -->> Written by JaheedFX <<--
 
 local lazyBin = {}
