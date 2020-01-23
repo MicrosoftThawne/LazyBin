@@ -19,7 +19,7 @@ function lazyBin.match(_1, _2)
     return false
   end
 end
-
+--[[
 -->> TODO: Add arguments to registered functions! <<--
 Mouse.KeyDown(function(key)
     if string.match(table.concat(RegisteredKeys), tolower(key)) then
@@ -29,7 +29,7 @@ Mouse.KeyDown(function(key)
       	end
     	end
     end
-end)
+end)]]--
   
 function lazyBin.ChangeText(object, text)
   object.Text = text
